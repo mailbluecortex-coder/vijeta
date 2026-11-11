@@ -69,8 +69,8 @@ export default function ProductFloorCleaner({ onNavigate, onOpenEnquiry }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '3.5rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(2rem, 3vw, 3.5rem)',
               alignItems: 'center'
             }}
           >
@@ -84,7 +84,7 @@ export default function ProductFloorCleaner({ onNavigate, onOpenEnquiry }) {
                   borderRadius: '28px',
                   border: '1.5px solid rgba(242, 199, 217, 0.85)',
                   overflow: 'hidden',
-                  padding: '2.5rem',
+                  padding: 'clamp(1rem, 3vw, 2.5rem)',
                   boxShadow: '0 20px 48px rgba(216, 10, 104, 0.18), 0 0 28px rgba(255, 117, 160, 0.12)',
                   display: 'flex',
                   alignItems: 'center',

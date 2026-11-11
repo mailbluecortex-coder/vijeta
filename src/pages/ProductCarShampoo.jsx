@@ -58,8 +58,8 @@ export default function ProductCarShampoo({ onNavigate, onOpenEnquiry }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '3.5rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(2rem, 3vw, 3.5rem)',
               alignItems: 'center'
             }}
           >

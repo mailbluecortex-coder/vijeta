@@ -75,13 +75,13 @@ export default function About({ onNavigate, onOpenEnquiry }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem' }}>
             {/* Mission Card */}
             <div
               className="liquid-glass-card"
               style={{
                 borderRadius: '24px',
-                padding: '2.5rem',
+                padding: 'clamp(1.5rem, 3vw, 2.5rem)',
                 border: '1px solid rgba(242, 199, 217, 0.75)',
                 boxShadow: '0 14px 36px rgba(216, 10, 104, 0.08), 0 0 20px rgba(255, 117, 160, 0.06)',
                 display: 'flex',
@@ -159,8 +159,8 @@ export default function About({ onNavigate, onOpenEnquiry }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '3.5rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(2rem, 3vw, 3.5rem)',
               alignItems: 'center'
             }}
           >
@@ -335,7 +335,7 @@ export default function About({ onNavigate, onOpenEnquiry }) {
             <h2 className="section-title">Formulated for Performance, Bottled with Care</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem' }}>
             <div style={{ padding: '2rem', backgroundColor: '#FFF5F9', borderRadius: '20px', border: '1px solid #F2C7D9' }}>
               <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FCE4EF', color: '#D80A68', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
                 <ShieldCheck size={24} />

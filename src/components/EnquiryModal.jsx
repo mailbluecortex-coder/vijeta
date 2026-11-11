@@ -83,7 +83,7 @@ Sent via official website: www.vijetaenterprises.com`;
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '1.25rem',
+        padding: 'clamp(0.5rem, 2vw, 1.25rem)',
         backgroundColor: 'rgba(13, 30, 66, 0.65)',
         backdropFilter: 'blur(6px)'
       }}
@@ -94,16 +94,16 @@ Sent via official website: www.vijetaenterprises.com`;
         style={{
           width: '100%',
           maxWidth: '560px',
-          backgroundColor: 'rgba(255, 255, 255, 0.94)',
+          backgroundColor: 'rgba(255, 255, 255, 0.96)',
           backdropFilter: 'blur(18px)',
           WebkitBackdropFilter: 'blur(18px)',
-          borderRadius: '26px',
+          borderRadius: '24px',
           boxShadow: '0 25px 60px -8px rgba(216, 10, 104, 0.28), 0 0 35px rgba(255, 117, 160, 0.18)',
           border: '1.5px solid rgba(242, 199, 217, 0.9)',
           overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
-          maxHeight: '92vh'
+          maxHeight: '94vh'
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -113,16 +113,16 @@ Sent via official website: www.vijetaenterprises.com`;
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '1.25rem 1.75rem',
+            padding: '1rem clamp(1rem, 3vw, 1.5rem)',
             borderBottom: '1px solid #F2C7D9',
             backgroundColor: '#FFF5F9'
           }}
         >
           <div>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 800, color: '#142D62', margin: 0 }}>
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 800, color: '#142D62', margin: 0 }}>
               Product Enquiry & Quotation
             </h3>
-            <span style={{ fontSize: '0.75rem', color: '#D80A68', fontWeight: 700, letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+            <span style={{ fontSize: '0.72rem', color: '#D80A68', fontWeight: 700, letterSpacing: '0.5px', textTransform: 'uppercase' }}>
               VIJETA ENTERPRISES • Kurduwadi, Solapur
             </span>
           </div>
@@ -149,7 +149,7 @@ Sent via official website: www.vijetaenterprises.com`;
         </div>
 
         {/* Modal Body */}
-        <div style={{ padding: '1.75rem', overflowY: 'auto' }}>
+        <div style={{ padding: 'clamp(1rem, 3vw, 1.5rem)', overflowY: 'auto' }}>
           {submitted ? (
             <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
               <div style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#DEF7EC', color: '#03543F', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem' }}>
@@ -190,7 +190,7 @@ Sent via official website: www.vijetaenterprises.com`;
                 </select>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '1.15rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '1.15rem' }}>
                 <div>
                   <label style={labelStyle}>Your Name <span style={{ color: '#D80A68' }}>*</span></label>
                   <input
@@ -228,7 +228,7 @@ Sent via official website: www.vijetaenterprises.com`;
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '1.15rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '1.15rem' }}>
                 <div>
                   <label style={labelStyle}>City / Town <span style={{ color: '#D80A68' }}>*</span></label>
                   <input

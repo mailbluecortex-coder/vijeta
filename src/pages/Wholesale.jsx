@@ -165,8 +165,8 @@ Please share GST tax invoice pricing and dispatch schedule from Kurduwadi, Solap
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '3.5rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(2rem, 3vw, 3.5rem)',
               alignItems: 'start'
             }}
           >
@@ -426,7 +426,7 @@ Please share GST tax invoice pricing and dispatch schedule from Kurduwadi, Solap
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem' }}>
             {/* Wholesale Model Card */}
             <div className="liquid-glass-card" style={{ padding: '2.25rem', borderRadius: '24px', border: '2px solid rgba(216, 10, 104, 0.3)', boxShadow: '0 16px 36px rgba(216, 10, 104, 0.12)' }}>
               <div style={{ display: 'inline-block', backgroundColor: '#FFF5F9', color: '#D80A68', padding: '0.35rem 0.9rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem', border: '1px solid #F2C7D9' }}>

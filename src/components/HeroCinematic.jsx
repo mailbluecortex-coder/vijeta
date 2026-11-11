@@ -50,8 +50,8 @@ export default function HeroCinematic({ onNavigate, onOpenEnquiry }) {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '3.5rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+            gap: 'clamp(2rem, 4vw, 3.5rem)',
             alignItems: 'center'
           }}
         >
@@ -186,6 +186,7 @@ export default function HeroCinematic({ onNavigate, onOpenEnquiry }) {
 
               {/* Floating Feature Tag Top Right */}
               <div
+                className="hero-badge-top"
                 style={{
                   position: 'absolute',
                   top: '12%',
@@ -211,7 +212,8 @@ export default function HeroCinematic({ onNavigate, onOpenEnquiry }) {
                     color: '#D80A68',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    flexShrink: 0
                   }}
                 >
                   <Sparkles size={18} />
@@ -241,6 +243,7 @@ export default function HeroCinematic({ onNavigate, onOpenEnquiry }) {
 
               {/* Floating Feature Tag Bottom Left */}
               <div
+                className="hero-badge-bottom"
                 style={{
                   position: 'absolute',
                   bottom: '10%',
@@ -266,7 +269,8 @@ export default function HeroCinematic({ onNavigate, onOpenEnquiry }) {
                     color: '#D80A68',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    flexShrink: 0
                   }}
                 >
                   <Droplets size={18} />
@@ -282,6 +286,21 @@ export default function HeroCinematic({ onNavigate, onOpenEnquiry }) {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .hero-badge-top {
+            right: 0 !important;
+            top: 2% !important;
+            padding: 0.5rem 0.85rem !important;
+          }
+          .hero-badge-bottom {
+            left: 0 !important;
+            bottom: 2% !important;
+            padding: 0.5rem 0.85rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

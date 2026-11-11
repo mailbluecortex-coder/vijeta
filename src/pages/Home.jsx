@@ -95,7 +95,7 @@ export default function Home({ onNavigate, onOpenEnquiry }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
               gap: '2rem'
             }}
           >
@@ -144,8 +144,8 @@ export default function Home({ onNavigate, onOpenEnquiry }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '3.5rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(2rem, 3vw, 3.5rem)',
               alignItems: 'center'
             }}
           >
@@ -279,8 +279,8 @@ export default function Home({ onNavigate, onOpenEnquiry }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '2rem'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(1.25rem, 2vw, 2rem)'
             }}
           >
             {products.map((item) => (
@@ -395,8 +395,8 @@ export default function Home({ onNavigate, onOpenEnquiry }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '3.5rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(2rem, 3vw, 3.5rem)',
               alignItems: 'center'
             }}
           >
@@ -449,7 +449,7 @@ export default function Home({ onNavigate, onOpenEnquiry }) {
       {/* 6. Wholesale Banner */}
       <section style={{ backgroundColor: '#142D62', color: '#FFFFFF', padding: 'clamp(3.5rem, 3rem + 3vw, 5.5rem) 0' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2.5rem', alignItems: 'center' }}>
             <div>
               <div className="eyebrow eyebrow-light">Bulk Supply</div>
               <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-3xl)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>
@@ -464,7 +464,7 @@ export default function Home({ onNavigate, onOpenEnquiry }) {
               </button>
             </div>
 
-            <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.18)', borderRadius: '24px', padding: '2rem' }}>
+            <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.18)', borderRadius: '24px', padding: 'clamp(1.5rem, 3vw, 2rem)' }}>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.75rem' }}>Fast Wholesale Quote</h3>
               <p style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.8)', marginBottom: '1.5rem' }}>
                 Connect directly with management on WhatsApp to discuss volumes, pallet dispatch, and delivery terms.
@@ -511,10 +511,10 @@ export default function Home({ onNavigate, onOpenEnquiry }) {
             className="liquid-glass-card"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
               gap: '2.5rem',
               alignItems: 'center',
-              padding: 'clamp(2rem, 3vw, 3rem)',
+              padding: 'clamp(1.5rem, 3vw, 3rem)',
               backgroundColor: 'rgba(255, 255, 255, 0.92)',
               borderRadius: '24px',
               border: '1px solid rgba(242, 199, 217, 0.85)',

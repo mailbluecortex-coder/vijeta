@@ -166,8 +166,8 @@ export default function App() {
         aria-label="Direct WhatsApp Contact"
         style={{
           position: 'fixed',
-          bottom: '24px',
-          right: '24px',
+          bottom: 'clamp(14px, 2.5vh, 24px)',
+          right: 'clamp(12px, 2.5vw, 24px)',
           zIndex: 9999
         }}
       >
@@ -178,14 +178,14 @@ export default function App() {
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '10px',
+            gap: '8px',
             backgroundColor: '#25D366',
             color: '#FFFFFF',
-            padding: '12px 20px',
+            padding: '10px 18px',
             borderRadius: '9999px',
             boxShadow: '0 8px 24px rgba(37, 211, 102, 0.45)',
             fontWeight: 700,
-            fontSize: '14px',
+            fontSize: '13.5px',
             textDecoration: 'none',
             letterSpacing: '0.3px',
             transition: 'transform 0.25s, box-shadow 0.25s'

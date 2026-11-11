@@ -13,13 +13,21 @@ export default function Header({
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 1024 : false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
+    };
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const handleLink = (path, e) => {
@@ -33,8 +41,8 @@ export default function Header({
     }
   };
 
-  // Determine styling based on scroll and whether we are over the pink hero
-  const isPinkHero = heroMode && !scrolled;
+  // On desktop, header is pink when over hero and at top. On mobile, header is ALWAYS high-contrast white with dark brand logo.
+  const isPinkHero = !isMobile && heroMode && !scrolled;
 
   return (
     <>
@@ -44,31 +52,53 @@ export default function Header({
           top: 0,
           left: 0,
           width: '100%',
-          height: scrolled ? '72px' : '84px',
+          height: scrolled ? (isMobile ? '64px' : '72px') : (isMobile ? '70px' : '84px'),
           zIndex: 1000,
-          backgroundColor: isPinkHero ? 'rgba(216, 10, 104, 0.92)' : 'rgba(255, 255, 255, 0.97)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
+          backgroundColor: isPinkHero ? 'rgba(216, 10, 104, 0.94)' : 'rgba(255, 255, 255, 0.98)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
           borderBottom: isPinkHero
             ? '1px solid rgba(255, 255, 255, 0.2)'
-            : '1px solid rgba(242, 199, 217, 0.6)',
-          boxShadow: scrolled ? '0 4px 20px rgba(20, 45, 98, 0.06)' : 'none',
-          transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
+            : '1px solid rgba(242, 199, 217, 0.85)',
+          boxShadow: isPinkHero 
+            ? '0 4px 20px rgba(140, 6, 66, 0.15)' 
+            : '0 4px 20px rgba(216, 10, 104, 0.08), 0 1px 3px rgba(20, 45, 98, 0.04)',
+          transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
         }}
       >
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}>
+        <div 
+          className="container" 
+          style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'space-between', 
+            height: '100%',
+            padding: isMobile ? '0 1rem' : undefined
+          }}
+        >
           
-          {/* Logo */}
+          {/* Brand Logo — High-contrast & fully legible on all devices */}
           <a
             href="/"
             onClick={(e) => handleLink('/', e)}
-            style={{ display: 'flex', alignItems: 'center', height: '52px' }}
+            style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              textDecoration: 'none',
+              flexShrink: 0
+            }}
             aria-label="Vijeta Enterprises"
           >
             <img
               src={isPinkHero ? '/assets/images/brand/logo-light.svg' : '/assets/images/brand/logo.svg'}
               alt="VIJETA ENTERPRISES"
-              style={{ height: '48px', width: 'auto', objectFit: 'contain' }}
+              style={{ 
+                height: scrolled ? (isMobile ? '38px' : '44px') : (isMobile ? '42px' : '50px'), 
+                width: 'auto', 
+                maxWidth: isMobile ? '185px' : '240px',
+                objectFit: 'contain',
+                transition: 'height 0.25s'
+              }}
             />
           </a>
 
@@ -197,13 +227,14 @@ export default function Header({
           </nav>
 
           {/* Action CTAs */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '0.85rem', flexShrink: 0 }}>
             <button
               type="button"
               className={isPinkHero ? 'btn btn-light btn-sm' : 'btn btn-primary btn-sm'}
               onClick={() => onOpenEnquiry('Header Quick Action')}
+              style={isMobile ? { padding: '0 0.95rem', height: '36px', fontSize: '0.78rem', fontWeight: 700 } : undefined}
             >
-              Enquire Now
+              {isMobile ? 'Enquire' : 'Enquire Now'}
             </button>
 
             {/* Mobile Hamburger Button */}
@@ -214,14 +245,16 @@ export default function Header({
               aria-label="Open navigation menu"
               style={{
                 display: 'none',
-                width: '42px',
-                height: '42px',
+                width: isMobile ? '38px' : '42px',
+                height: isMobile ? '38px' : '42px',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: isPinkHero ? '#FFFFFF' : '#142D62'
+                color: isPinkHero ? '#FFFFFF' : '#142D62',
+                backgroundColor: isPinkHero ? 'rgba(255, 255, 255, 0.15)' : 'rgba(216, 10, 104, 0.08)',
+                borderRadius: '10px'
               }}
             >
-              <Menu size={26} />
+              <Menu size={24} />
             </button>
           </div>
         </div>

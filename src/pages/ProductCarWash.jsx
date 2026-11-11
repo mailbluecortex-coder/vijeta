@@ -293,13 +293,13 @@ export default function ProductCarWash({ onNavigate, onOpenEnquiry }) {
             </div>
           </div>
 
-          {/* Center 2-Column Stage: Video on Left + Scene Details on Right */}
+          {/* Center Stage: Video on Left/Top + Scene Details on Right/Bottom */}
           <div
             style={{
               flex: 1,
               display: 'grid',
-              gridTemplateColumns: 'minmax(320px, 1.2fr) minmax(300px, 1fr)',
-              gap: '2.5rem',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+              gap: 'clamp(1.5rem, 3vw, 2.5rem)',
               alignItems: 'center',
               justifyContent: 'center',
               minHeight: 0,
@@ -621,7 +621,7 @@ export default function ProductCarWash({ onNavigate, onOpenEnquiry }) {
               borderRadius: '28px',
               padding: 'clamp(2.5rem, 2rem + 2vw, 4rem)',
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
               gap: '2.5rem',
               alignItems: 'center',
               boxShadow: '0 20px 50px rgba(15, 23, 42, 0.15)'

@@ -238,8 +238,8 @@ export default function Products({ onNavigate, onOpenEnquiry }) {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '2.5rem'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gap: 'clamp(1.5rem, 2.5vw, 2.5rem)'
             }}
           >
             {filteredProducts.map((p) => (
@@ -415,7 +415,7 @@ export default function Products({ onNavigate, onOpenEnquiry }) {
               borderRadius: '28px',
               padding: 'clamp(2.5rem, 2rem + 2vw, 4rem)',
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
               gap: '2.5rem',
               alignItems: 'center'
             }}

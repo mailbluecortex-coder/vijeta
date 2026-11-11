@@ -127,7 +127,7 @@ Please review our distributor profile and share territory dealership terms.`;
             <h2 className="section-title">Why Stockists & Distributors Choose Vijeta</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem' }}>
             <div style={distCardStyle}>
               <div style={distIconStyle}><TrendingUp size={24} /></div>
               <h3 style={distCardTitleStyle}>Healthy Trade Margins</h3>
@@ -356,7 +356,7 @@ Please review our distributor profile and share territory dealership terms.`;
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem' }}>
             {/* Distribution Model Card */}
             <div className="liquid-glass-card" style={{ padding: '2.25rem', borderRadius: '24px', border: '2px solid rgba(216, 10, 104, 0.3)', boxShadow: '0 16px 36px rgba(216, 10, 104, 0.12)' }}>
               <div style={{ display: 'inline-block', backgroundColor: '#FFF5F9', color: '#D80A68', padding: '0.35rem 0.9rem', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem', border: '1px solid #F2C7D9' }}>
