@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="100%" height="100%" fill="none">
+  <!-- Vijeta Enterprises Brand Emblem (Light on Pink) -->
+  <g id="logo-emblem-light" transform="translate(10, 10)">
+    <circle cx="35" cy="35" r="34" fill="rgba(255, 255, 255, 0.15)" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.5"/>
+    <circle cx="35" cy="35" r="28" fill="rgba(255, 255, 255, 0.25)"/>
+    
+    <path d="M35 15 C30 25, 20 32, 20 44 C20 52, 26 58, 35 58 C44 58, 50 52, 50 44 C50 32, 40 25, 35 15 Z" fill="#FFFFFF"/>
+    <path d="M35 22 C32 29, 26 34, 26 42 C26 47, 30 51, 35 51 C40 51, 44 47, 44 42 C44 34, 38 29, 35 22 Z" fill="#FCE4EF"/>
+    <circle cx="35" cy="38" r="4.5" fill="#D80A68"/>
+    <path d="M35 30 L35 46 M27 38 L43 38" stroke="#D80A68" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand Typography (Light on Pink) -->
+  <g transform="translate(92, 16)">
+    <text x="0" y="24" font-family="'Noto Sans Devanagari', 'Mukta', 'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="0.5px">
+      विजेता <tspan fill="#FFF5F9" font-weight="700">एंटरप्रायजेस</tspan>
+    </text>
+    
+    <text x="0" y="44" font-family="'Plus Jakarta Sans', 'Manrope', sans-serif" font-weight="700" font-size="13" fill="#FFF5F9" letter-spacing="3px">
+      VIJETA ENTERPRISES
+    </text>
+
+    <text x="0" y="60" font-family="'Noto Sans Devanagari', sans-serif" font-weight="500" font-size="11" fill="rgba(255, 255, 255, 0.85)" letter-spacing="0.5px">
+      स्वच्छता <tspan fill="#FFFFFF">•</tspan> आरोग्य <tspan fill="#FFFFFF">•</tspan> विश्वास
+    </text>
+  </g>
+</svg>
